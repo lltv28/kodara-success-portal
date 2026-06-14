@@ -122,6 +122,7 @@ h1.headline{font-family:var(--font-display);font-weight:700;font-size:var(--fs-d
 /* recap timeline (reuses lander pattern, trimmed) */
 .timeline{--tl-node:60px;--tl-gap:clamp(26px,3.4vw,38px);position:relative;margin:clamp(8px,1.5vw,20px) 0 0}
 .tl-step{position:relative;display:grid;grid-template-columns:var(--tl-node) 1fr;gap:clamp(18px,2.6vw,28px);padding-bottom:var(--tl-gap)}
+.tl-node{position:relative}
 .timeline>:not(:last-child) .tl-node::after{content:"";position:absolute;left:50%;transform:translateX(-50%);top:var(--tl-node);bottom:calc(-1 * var(--tl-gap));width:2px;background:var(--accent-line)}
 .tl-num{width:var(--tl-node);height:var(--tl-node);border-radius:50%;border:1px solid var(--accent-line);background:var(--accent-soft);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:var(--fs-title);line-height:1}
 .tl-card{background:#fff;border:1px solid var(--line-2);border-radius:var(--r-md);padding:clamp(20px,2.4vw,28px);transition:transform var(--dur-base),box-shadow var(--dur-base)}
