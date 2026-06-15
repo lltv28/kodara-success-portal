@@ -117,7 +117,7 @@ h1.headline{font-family:var(--font-display);font-weight:700;font-size:var(--fs-d
 .player-watch{position:absolute;left:0;right:0;bottom:16px;text-align:center;color:rgba(255,255,255,.85);font-size:var(--fs-xs)}
 /* embedded auto-playing AI demo (isolated iframe, reused from lander) */
 .fd-embed{max-width:var(--w-content);margin-inline:auto}
-.fd-frame{display:block;width:100%;border:0;background:transparent;height:auto;min-height:600px;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-mockup);transition:height .25s ease}
+.fd-frame{display:block;width:100%;border:0;background:transparent;height:auto;min-height:600px;transition:height .25s ease}
 
 /* recap timeline (reuses lander pattern, trimmed) */
 .timeline{--tl-node:60px;--tl-gap:clamp(26px,3.4vw,38px);position:relative;margin:clamp(8px,1.5vw,20px) 0 0}
@@ -163,15 +163,10 @@ h1.headline{font-family:var(--font-display);font-weight:700;font-size:var(--fs-d
 @media(max-width:760px){.pillars{grid-template-columns:1fr}}
 
 /* offer engine sub-blocks + routing diagram */
-.stack{display:flex;flex-direction:column;gap:20px;margin-top:var(--space-block)}
-.note-card{border:1px solid var(--line-2);border-radius:var(--r-md);padding:clamp(20px,2.4vw,28px);background:#fff;transition:transform var(--dur-base),box-shadow var(--dur-base)}
-.note-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-mockup)}
+.vid-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,2.4vw,28px);margin-top:var(--space-block)}
 .note-kicker{display:block;font-family:var(--mono);font-size:var(--fs-label);letter-spacing:.04em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);margin-bottom:var(--sp-2)}
-.note-card h3{font-size:var(--fs-title)}
-.note-card p{font-size:var(--fs-sm);line-height:1.6;margin-top:var(--sp-3)}
-.routing{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:var(--sp-5)}
-.routing .node{background:var(--accent-soft);border:1px solid var(--accent-line);color:var(--accent-ink);font-weight:600;font-size:var(--fs-xs);padding:12px 16px;border-radius:var(--r-sm);text-align:center}
-.routing .arr{color:var(--accent);font-weight:700}
+.vid-card h3{font-size:var(--fs-title);margin-bottom:var(--sp-4)}
+@media(max-width:760px){.vid-grid{grid-template-columns:1fr}}
 
 /* vs table (moat) */
 .vs{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:var(--space-block);border:1px solid var(--line-2);border-radius:var(--r-md);overflow:hidden}
@@ -369,21 +364,47 @@ body::after{content:"";position:fixed;inset:0;z-index:1;background-image:linear-
     <div class="section-head rv">
       <div class="eyebrow">The offer engine</div>
       <h2>Why the low ticket, and how it leads to the big sale.</h2>
-      <p class="sub">This is the part smart owners second-guess. So let me walk you through the math.</p>
+      <p class="sub">This is the part smart owners second-guess. So I broke it down into four quick videos.</p>
     </div>
-    <div class="stack rv">
-      <div class="note-card"><span class="note-kicker">01</span><h3>What is the low ticket?</h3><p>It's a small paid offer, usually somewhere around $20 to $50. It's how a total stranger tries your work for the first time. And here's the key. Someone who pays you $20 is a buyer, not a freebie-seeker. Now you might worry a cheap offer cheapens your brand. It's actually the opposite. The person who trusts you with $20 is the same person who trusts you with $20,000 later.</p></div>
-      <div class="note-card"><span class="note-kicker">02</span><h3>What is the mid ticket?</h3><p>This is your real program, the one that actually changes their life. The AI only soft-pitches it after someone has bought the low ticket and started to trust you. The low ticket sells the "why." The mid ticket sells the "how." In their head it's just an upgrade, and upgrades are an easy yes.</p></div>
-      <div class="note-card"><span class="note-kicker">03</span><h3>Keys to a great entry-level low ticket</h3><p>The best ones do four things. They solve one specific, painful problem. They get a fast win. They're priced to filter for real buyers instead of browsers. And they lead naturally into the next step, so the bigger offer feels obvious instead of pushy.</p></div>
-      <div class="note-card">
-        <span class="note-kicker">04</span><h3>How offer routing works</h3>
-        <p>Here's where it gets really interesting. The AI reads each person's answers and sends them down the right path. Not everyone gets the same pitch. Someone who's ready gets walked straight to your program. Someone who needs more time gets followed up with until they are.</p>
-        <div class="routing">
-          <span class="node">Lead</span><span class="arr">→</span>
-          <span class="node">Quiz / qualify</span><span class="arr">→</span>
-          <span class="node">Low ticket</span><span class="arr">→</span>
-          <span class="node">AI reads signals</span><span class="arr">→</span>
-          <span class="node">Mid ticket / nurture</span>
+    <div class="vid-grid rv">
+      <div class="vid-card">
+        <span class="note-kicker">01</span>
+        <h3>What is the low ticket?</h3>
+        <div class="player" role="img" aria-label="Video: what is the low ticket">
+          <span class="player-tag">Low ticket</span>
+          <span class="player-dur">~2 min</span>
+          <span class="player-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg></span>
+          <span class="player-watch">Watch</span>
+        </div>
+      </div>
+      <div class="vid-card">
+        <span class="note-kicker">02</span>
+        <h3>What is the mid ticket?</h3>
+        <div class="player" role="img" aria-label="Video: what is the mid ticket">
+          <span class="player-tag">Mid ticket</span>
+          <span class="player-dur">~2 min</span>
+          <span class="player-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg></span>
+          <span class="player-watch">Watch</span>
+        </div>
+      </div>
+      <div class="vid-card">
+        <span class="note-kicker">03</span>
+        <h3>Keys to a great low ticket</h3>
+        <div class="player" role="img" aria-label="Video: keys to a great low ticket">
+          <span class="player-tag">The keys</span>
+          <span class="player-dur">~2 min</span>
+          <span class="player-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg></span>
+          <span class="player-watch">Watch</span>
+        </div>
+      </div>
+      <div class="vid-card">
+        <span class="note-kicker">04</span>
+        <h3>How offer routing works</h3>
+        <div class="player" role="img" aria-label="Video: how offer routing works">
+          <span class="player-tag">Offer routing</span>
+          <span class="player-dur">~2 min</span>
+          <span class="player-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg></span>
+          <span class="player-watch">Watch</span>
         </div>
       </div>
     </div>
