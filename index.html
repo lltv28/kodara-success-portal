@@ -40,7 +40,7 @@
   --font-body:"Instrument Sans",sans-serif;
   --mono:"IBM Plex Mono",monospace;
   --grid-opacity:0.12;
-  --maxw:1120px; --w-content:880px; --w-prose:740px; --measure:66ch;
+  --maxw:1260px; --w-content:880px; --w-prose:740px; --measure:66ch;
   --space-section:clamp(4rem, 2rem + 5vw, 9rem); --space-block:clamp(2.5rem, 1.5rem + 2.6vw, 5.25rem); --space-head:clamp(2.5rem, 1.5rem + 2vw, 4rem); --space-eyebrow:var(--sp-5); --space-heading:var(--sp-5); --space-tight:var(--sp-3);
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -64,7 +64,7 @@ h1.headline,h2,h3{text-wrap:balance}
 p{color:var(--ink-2);text-wrap:pretty;max-width:var(--measure)}
 strong{color:var(--ink);font-weight:600}
 .muted{color:var(--ink-2)}
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,5vw,72px);align-items:center}
+.two-col{display:grid;grid-template-columns:0.85fr 1.15fr;gap:clamp(40px,5vw,72px);align-items:center}
 
 
 /* buttons */
@@ -75,7 +75,7 @@ strong{color:var(--ink);font-weight:600}
 .section-cta{display:flex;justify-content:center;margin-top:var(--space-block)}
 
 /* left rail nav (sticky, full-height) — light surface chrome matches the lander */
-.layout{display:grid;grid-template-columns:268px minmax(0,1fr);align-items:start}
+.layout{display:grid;grid-template-columns:236px minmax(0,1fr);align-items:start}
 .main{min-width:0}
 .rail{position:sticky;top:0;height:100vh;z-index:60}
 .rail-inner{display:flex;flex-direction:column;height:100%;background:var(--surface);border-right:1px solid var(--line);padding:26px 18px}
@@ -188,8 +188,8 @@ h1.headline{font-family:var(--font-display);font-weight:700;font-size:var(--fs-d
 
 /* case studies (reuse lander rows, trimmed) */
 .cases{margin-top:var(--space-block)}
-.cs{display:grid;grid-template-columns:1fr minmax(360px,520px);gap:clamp(36px,5vw,72px);align-items:center;padding:var(--space-block) 0;border-top:1px solid var(--line)}
-.cs:nth-child(even){grid-template-columns:minmax(360px,520px) 1fr}
+.cs{display:grid;grid-template-columns:1fr minmax(440px,640px);gap:clamp(36px,5vw,72px);align-items:center;padding:var(--space-block) 0;border-top:1px solid var(--line)}
+.cs:nth-child(even){grid-template-columns:minmax(440px,640px) 1fr}
 .cs:nth-child(even) .cs-media{order:1}
 .cs:nth-child(even) .cs-txt{order:2}
 .cs-h{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h3);line-height:1.12;letter-spacing:-.015em;color:var(--ink);max-width:18ch;text-shadow:0.3px 0 0 currentColor}
