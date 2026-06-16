@@ -172,6 +172,7 @@ wistia-player[media-id='5b6z8yvr5c']:not(:defined){background:center/contain no-
 wistia-player[media-id='il3wz1p5mr']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/il3wz1p5mr/swatch');display:block;filter:blur(5px);padding-top:56.25%}
 wistia-player[media-id='6v2mczimg3']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/6v2mczimg3/swatch');display:block;filter:blur(5px);padding-top:56.25%}
 wistia-player[media-id='xjvq1h79q8']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/xjvq1h79q8/swatch');display:block;filter:blur(5px);padding-top:56.25%}
+wistia-player[media-id='1m53imbdkv']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/1m53imbdkv/swatch');display:block;filter:blur(5px);padding-top:56.25%}
 @media(max-width:760px){.vid-grid{grid-template-columns:1fr}}
 
 /* vs table (moat) */
@@ -364,8 +365,33 @@ body::after{content:"";position:fixed;inset:0;z-index:1;background-image:linear-
   </div>
 </section>
 
-<!-- ══ 5 · THE OFFER ENGINE ══ -->
-<section class="section tint" id="offer">
+<!-- ══ HOW WE BUILD YOUR AI ══ -->
+<section class="section tint" id="build">
+  <div class="wrap">
+    <div class="two-col">
+      <div class="rv">
+        <div class="eyebrow">Built around you</div>
+        <h2>How we build <em>your</em> AI, perfectly.</h2>
+        <p class="sub">It's trained on your stuff, and only your stuff. So it sounds like you, not like a robot, and not like anybody else.</p>
+        <ul class="deliver" style="margin-top:var(--sp-5)">
+          <li>We train it on your calls, courses, podcasts, and notes</li>
+          <li>You approve every word, and you set what it can and can't say</li>
+          <li>Add a video avatar in your likeness if you want one</li>
+          <li>Most of the time, it's live in about two weeks</li>
+        </ul>
+        <p style="margin-top:var(--sp-5);font-size:var(--fs-sm)">And the best part? Your only job is to be the expert. We handle every bit of the tech.</p>
+      </div>
+      <div class="rv">
+        <div class="vid-embed">
+          <wistia-player media-id="1m53imbdkv" aspect="1.7777777777777777"></wistia-player>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ THE OFFER ENGINE ══ -->
+<section class="section" id="offer">
   <div class="wrap">
     <div class="section-head rv">
       <div class="eyebrow">The offer engine</div>
@@ -405,34 +431,7 @@ body::after{content:"";position:fixed;inset:0;z-index:1;background-image:linear-
   </div>
 </section>
 
-<!-- ══ 6 · HOW WE BUILD YOUR AI ══ -->
-<section class="section" id="build">
-  <div class="wrap">
-    <div class="two-col">
-      <div class="rv">
-        <div class="eyebrow">Built around you</div>
-        <h2>How we build <em>your</em> AI, perfectly.</h2>
-        <p class="sub">It's trained on your stuff, and only your stuff. So it sounds like you, not like a robot, and not like anybody else.</p>
-        <ul class="deliver" style="margin-top:var(--sp-5)">
-          <li>We train it on your calls, courses, podcasts, and notes</li>
-          <li>You approve every word, and you set what it can and can't say</li>
-          <li>Add a video avatar in your likeness if you want one</li>
-          <li>Most of the time, it's live in about two weeks</li>
-        </ul>
-        <p style="margin-top:var(--sp-5);font-size:var(--fs-sm)">And the best part? Your only job is to be the expert. We handle every bit of the tech.</p>
-      </div>
-      <div class="rv">
-        <div class="player" role="img" aria-label="How the build works">
-          <span class="player-tag">How the build works</span>
-          <span class="player-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg></span>
-          <span class="player-watch">Watch the overview</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ 7 · WHY THIS CAN'T BE COPIED ══ -->
+<!-- ══ WHY THIS CAN'T BE COPIED ══ -->
 <section class="section tint" id="moat">
   <div class="wrap">
     <div class="section-head rv">
@@ -549,5 +548,6 @@ document.querySelectorAll('.rnav a').forEach(a=>{
 <script src="https://fast.wistia.com/embed/il3wz1p5mr.js" async type="module"></script>
 <script src="https://fast.wistia.com/embed/6v2mczimg3.js" async type="module"></script>
 <script src="https://fast.wistia.com/embed/xjvq1h79q8.js" async type="module"></script>
+<script src="https://fast.wistia.com/embed/1m53imbdkv.js" async type="module"></script>
 </body>
 </html>
