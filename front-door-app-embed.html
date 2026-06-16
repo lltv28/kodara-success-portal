@@ -21,8 +21,8 @@ body{font-family:var(--fb);background:transparent;color:var(--ink);-webkit-font-
 .below{margin-bottom:36px;text-align:center;max-width:620px}
 .below-eyebrow{font-family:var(--mono);font-size:.8125rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--accent-ink);display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:14px}
 .below-eyebrow::before{content:"";width:12px;height:1.5px;background:var(--accent)}
-.below-h{font-family:var(--fd);font-weight:700;font-size:clamp(2.375rem, 1.5rem + 3.4vw, 4.75rem);line-height:1.1;letter-spacing:-.025em;margin-bottom:12px}
-.below-sub{font-size:clamp(1.5rem, 1.2rem + 1vw, 1.75rem);color:var(--ink-2);line-height:1.6;margin-bottom:24px}
+.below-h{font-family:var(--fd);font-weight:700;font-size:clamp(2.375rem, 1.5rem + 3.4vw, 4.75rem);line-height:1.1;letter-spacing:-.025em;margin-bottom:12px;text-wrap:balance}
+.below-sub{font-size:clamp(1.5rem, 1.2rem + 1vw, 1.75rem);color:var(--ink-2);line-height:1.6;margin-bottom:24px;text-wrap:balance}
 .industry{width:max-content;max-width:min(840px,92vw);position:relative;left:50%;transform:translateX(-50%)}
 .industry .ik{font-family:var(--mono);font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-3);display:block;text-align:center;margin-bottom:12px}
 .industry-row{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
@@ -231,7 +231,7 @@ body{font-family:var(--fb);background:transparent;color:var(--ink);-webkit-font-
 <div class="wrap">
   <div class="below">
     <h2 class="below-h">Watch it turn a stranger into a sale.</h2>
-    <p class="below-sub">When a new lead shows up, your AI does what you’d do on a first call — it asks the right questions, works out what they need, and points them to the next step. On its own, for hundreds at once.</p>
+    <p class="below-sub">When a new lead shows up, your AI does what you’d do on a first call. It asks the right questions, works out what they need, and points them to the next step. On its own, for hundreds at once.</p>
     <div class="industry"><span class="ik">Try it for your world:</span><div class="industry-row"><button class="pill active" data-ind="finance" aria-pressed="true">Financial advisor</button><button class="pill" data-ind="doctor" aria-pressed="false">Doctor</button><button class="pill" data-ind="mortgage" aria-pressed="false">Mortgage broker</button><button class="pill" data-ind="lawyer" aria-pressed="false">Lawyer</button><button class="pill" data-ind="consultant" aria-pressed="false">Business consultant</button></div></div>
   </div>
 
