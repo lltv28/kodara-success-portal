@@ -166,6 +166,9 @@ h1.headline{font-family:var(--font-display);font-weight:700;font-size:var(--fs-d
 .vid-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,2.4vw,28px);margin-top:var(--space-block)}
 .note-kicker{display:block;font-family:var(--mono);font-size:var(--fs-label);letter-spacing:.04em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);margin-bottom:var(--sp-2)}
 .vid-card h3{font-size:var(--fs-title);margin-bottom:var(--sp-4)}
+.vid-embed{border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-mockup);background:#000}
+.vid-embed wistia-player{display:block;border-radius:inherit;overflow:hidden}
+wistia-player[media-id='5b6z8yvr5c']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/5b6z8yvr5c/swatch');display:block;filter:blur(5px);padding-top:56.25%}
 @media(max-width:760px){.vid-grid{grid-template-columns:1fr}}
 
 /* vs table (moat) */
@@ -390,11 +393,8 @@ body::after{content:"";position:fixed;inset:0;z-index:1;background-image:linear-
       <div class="vid-card">
         <span class="note-kicker">03</span>
         <h3>Keys to a great low ticket</h3>
-        <div class="player" role="img" aria-label="Video: keys to a great low ticket">
-          <span class="player-tag">The keys</span>
-          <span class="player-dur">~2 min</span>
-          <span class="player-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg></span>
-          <span class="player-watch">Watch</span>
+        <div class="vid-embed">
+          <wistia-player media-id="5b6z8yvr5c" aspect="1.7777777777777777"></wistia-player>
         </div>
       </div>
       <div class="vid-card">
@@ -550,5 +550,7 @@ document.querySelectorAll('.rnav a').forEach(a=>{
 });
 </script>
 
+<script src="https://fast.wistia.com/player.js" async></script>
+<script src="https://fast.wistia.com/embed/5b6z8yvr5c.js" async type="module"></script>
 </body>
 </html>
