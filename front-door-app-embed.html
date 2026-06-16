@@ -604,9 +604,10 @@ start();
       var al=Math.min(0.34+(q.rz+1)*0.30,0.94)*(0.92+lvl*0.08),rad=Math.max((0.85+(q.rz+1)*0.5)*small*(S/95),0.5);
       ctx.globalAlpha=al;ctx.fillStyle='rgb('+(c[0]*255|0)+','+(c[1]*255|0)+','+(c[2]*255|0)+')';
       ctx.beginPath();ctx.arc(q.sx,q.sy,rad,0,6.2832);ctx.fill();}
-    ctx.globalAlpha=1;requestAnimationFrame(frame);
+    ctx.globalAlpha=1;if(animate)requestAnimationFrame(frame);
   }
-  if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))requestAnimationFrame(frame);
+  var animate=!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+  requestAnimationFrame(frame);
 })();
 /* report height to the parent lander so the iframe can size to content */
 function reportHeight(){var h=Math.ceil(document.body.scrollHeight)+2;parent.postMessage({fdAppHeight:h},'*');}
