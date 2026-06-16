@@ -601,7 +601,7 @@ start();
       proj.push({sx:C+X*ORB*pe*amp+Math.sin(t*3+p.seed)*jit,sy:C+Y*ORB*pe*amp+Math.cos(t*2.6+p.seed*1.3)*jit,rz:Z,ry:p.y});}
     proj.sort(function(a,b){return a.rz-b.rz;});
     for(var k=0;k<proj.length;k++){var q=proj[k],vt=(q.ry+1)*0.5,c=vt<0.5?mix3(cur.deep,cur.brand,vt*2):mix3(cur.brand,cur.mint,(vt-0.5)*2);c=mix3(c,cur.hi,lvl*0.4*vt);
-      var al=Math.min(0.22+(q.rz+1)*0.25,0.9)*(0.85+lvl*0.15),rad=Math.max((0.7+(q.rz+1)*0.45)*small*(S/140),0.4);
+      var al=Math.min(0.22+(q.rz+1)*0.25,0.9)*(0.85+lvl*0.15),rad=Math.max((0.7+(q.rz+1)*0.45)*small*(S/120),0.4);
       ctx.globalAlpha=al;ctx.fillStyle='rgb('+(c[0]*255|0)+','+(c[1]*255|0)+','+(c[2]*255|0)+')';
       ctx.beginPath();ctx.arc(q.sx,q.sy,rad,0,6.2832);ctx.fill();}
     ctx.globalAlpha=1;requestAnimationFrame(frame);
