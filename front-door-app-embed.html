@@ -535,23 +535,23 @@ async function play(){
   // 2 · Figures out — runs the numbers
   setStep(2);
   show('[data-m="a3"]');await stream(q('[data-m="a3"]'),D.a3,55,alive);if(!alive())return;scrollDown();if(!await W(450))return;
-  show('[data-m="cards"]',false);const cards=qa('.card');for(let i=0;i<cards.length;i++){cards[i].classList.add('in');if(!await W(180))return;}
-  if(!await W(700))return;
-  show('[data-m="a4"]');await stream(q('[data-m="a4"]'),D.a4,55,alive);if(!alive())return;scrollDown();if(!await W(950))return;
+  show('[data-m="cards"]',false);const cards=qa('.card');for(let i=0;i<cards.length;i++){cards[i].classList.add('in');if(!await W(320))return;}
+  if(!await W(1400))return;
+  show('[data-m="a4"]');await stream(q('[data-m="a4"]'),D.a4,55,alive);if(!alive())return;scrollDown();if(!await W(1800))return;
 
   // 3 · Sells a first step — and the lead buys it on the spot
   setStep(3);
-  show('[data-m="a5"]');await stream(q('[data-m="a5"]'),D.a5,55,alive);if(!alive())return;if(!await W(400))return;
+  show('[data-m="a5"]');await stream(q('[data-m="a5"]'),D.a5,55,alive);if(!alive())return;if(!await W(700))return;
   const recoBtn=q('[data-m="reco"]').querySelector('.ocard-cta');
-  show('[data-m="reco"]');if(!await W(1500))return;
+  show('[data-m="reco"]');if(!await W(2600))return;
   if(recoBtn&&!await tapBuy(recoBtn,W))return;
   app.classList.add('entered');
-  if(!await W(1500))return;
+  if(!await W(2200))return;
 
   // 4 · Ascends — books the call (Calendly card, auto-played)
   setStep(4);
   show('[data-m="time"]');if(!await W(650))return;
-  show('[data-m="a6"]');await stream(q('[data-m="a6"]'),D.a6,55,alive);if(!alive())return;if(!await W(550))return;
+  show('[data-m="a6"]');await stream(q('[data-m="a6"]'),D.a6,55,alive);if(!alive())return;if(!await W(1400))return;
   steps[3].classList.add('done');
   const routeEl=q('[data-m="route"]');
   await new Promise(res=>{
