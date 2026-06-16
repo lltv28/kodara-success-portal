@@ -54,7 +54,7 @@ body{font-family:var(--fb);background:transparent;color:var(--ink);-webkit-font-
 .s-d{font-size:1.1875rem;color:var(--ink-2);line-height:1.45;margin-top:6px}
 
 /* ───── 1:1 app screen ───── */
-.app{width:390px;height:812px;flex:none;border-radius:48px;border:1px solid var(--a100);background:#fff;overflow:hidden;position:relative;display:flex;flex-direction:column;box-shadow:0 50px 90px -34px rgba(46,38,28,.42);font-weight:500}
+.app{--ctl:88px;width:390px;height:812px;flex:none;border-radius:48px;border:1px solid var(--a100);background:#fff;overflow:hidden;position:relative;display:flex;flex-direction:column;box-shadow:0 50px 90px -34px rgba(46,38,28,.42);font-weight:500}
 .app-bg{position:absolute;inset:0;z-index:0;pointer-events:none;transition:opacity .6s ease}
 .app-bg.g{background:linear-gradient(180deg,#fff 0%,var(--wash) 63%);opacity:1}
 .app-bg.o{background:linear-gradient(180deg,#fff 0%,#f4e6d3 63%);opacity:0}
@@ -96,13 +96,13 @@ body{font-family:var(--fb);background:transparent;color:var(--ink);-webkit-font-
 .vtrans{min-height:44px;display:flex;flex-wrap:wrap;gap:5px 7px;justify-content:center;align-items:center;padding:0 28px;max-width:100%}
 .vtrans .w{opacity:0;transform:translateY(5px);transition:opacity .3s ease,transform .3s ease;font-size:17px;font-weight:500;color:var(--a900);letter-spacing:-.2px}
 .vtrans .w.in{opacity:1;transform:none}
-.orb{position:relative;width:84px;height:84px;border-radius:50%;background:var(--orbImg) center/cover no-repeat;box-shadow:0 18px 40px -12px var(--orbGlow);animation:orbBreathe 4s ease-in-out infinite}
+.orb{position:relative;width:calc(var(--ctl)*1.4);height:calc(var(--ctl)*1.4);border-radius:50%;background:var(--orbImg) center/cover no-repeat;box-shadow:0 18px 40px -12px var(--orbGlow);animation:orbBreathe 4s ease-in-out infinite}
 .orb::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;box-shadow:0 0 0 0 rgba(201,138,74,0)}
 .orb.listening::after{animation:listenPulse 1.7s ease-out infinite}
 @keyframes listenPulse{0%{box-shadow:0 0 0 0 rgba(201,138,74,.5)}100%{box-shadow:0 0 0 20px rgba(201,138,74,0)}}
 @keyframes orbBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
 /* stylized talking AI avatar (test) — replaces the orb on one theme */
-.avatar{position:relative;width:92px;height:92px;border-radius:50%;display:none;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 30%,#fff3e8,#ffd9bd 58%,#eeb892);box-shadow:0 18px 40px -12px var(--orbGlow);animation:orbBreathe 4s ease-in-out infinite}
+.avatar{position:relative;width:calc(var(--ctl)*1.4);height:calc(var(--ctl)*1.4);border-radius:50%;display:none;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 30%,#fff3e8,#ffd9bd 58%,#eeb892);box-shadow:0 18px 40px -12px var(--orbGlow);animation:orbBreathe 4s ease-in-out infinite}
 .app.avatar-mode .avatar{display:flex}
 .app.avatar-mode .orb{display:none}
 .app.avatar-mode .vtrans{display:none}
@@ -131,7 +131,7 @@ body{font-family:var(--fb);background:transparent;color:var(--ink);-webkit-font-
 .vmic{width:88px;height:88px;border-radius:50%;border:1px solid var(--a100);background:var(--field-bg);backdrop-filter:blur(10px) saturate(140%);-webkit-backdrop-filter:blur(10px) saturate(140%);box-shadow:0 18px 40px -16px var(--orbGlow),inset 0 1px 0 rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center;color:var(--accent);cursor:default;padding:0;animation:vmicBreathe 3.8s ease-in-out infinite}
 .vmic svg{width:32px;height:32px;display:block}
 @keyframes vmicBreathe{0%,100%{box-shadow:0 18px 40px -16px var(--orbGlow),inset 0 1px 0 rgba(255,255,255,.7),0 0 0 0 color-mix(in srgb,var(--accent) 22%,transparent);transform:scale(1)}50%{box-shadow:0 18px 40px -16px var(--orbGlow),inset 0 1px 0 rgba(255,255,255,.7),0 0 0 11px color-mix(in srgb,var(--accent) 0%,transparent);transform:scale(1.03)}}
-.vorb{width:88px;height:88px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;padding:0;background:var(--card-bg);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--a100);box-shadow:0 16px 36px -16px rgba(17,24,39,.28),inset 0 1px 0 rgba(255,255,255,.7);color:var(--a600);cursor:default}
+.vorb{width:var(--ctl);height:var(--ctl);border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;padding:0;background:var(--card-bg);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--a100);box-shadow:0 16px 36px -16px rgba(17,24,39,.28),inset 0 1px 0 rgba(255,255,255,.7);color:var(--a600);cursor:default}
 .vorb svg{width:30px;height:30px;display:block}
 
 /* low-ticket offer card (ported from repo .chat-recommendation/.rec-cta) */
