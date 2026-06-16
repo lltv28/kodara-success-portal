@@ -167,6 +167,11 @@ h1.headline{font-family:var(--font-display);font-weight:700;font-size:var(--fs-d
 .note-kicker{display:block;font-family:var(--mono);font-size:var(--fs-label);letter-spacing:.04em;text-transform:uppercase;font-weight:700;color:var(--accent-ink);margin-bottom:var(--sp-2)}
 .vid-card h3{font-size:var(--fs-title);margin-bottom:var(--sp-4)}
 .vid-embed{border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-mockup);background:#000}
+.keys{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3.2vw,44px);margin-top:var(--space-block)}
+.key{border-top:2px solid var(--accent-line);padding-top:var(--sp-4)}
+.key strong{display:block;font-weight:600;font-size:var(--fs-sm);color:var(--ink);margin-bottom:var(--sp-2)}
+.key p{font-size:var(--fs-sm);color:var(--ink-2);line-height:1.6}
+@media(max-width:760px){.keys{grid-template-columns:1fr;gap:26px}}
 .vid-embed wistia-player{display:block;border-radius:inherit;overflow:hidden}
 wistia-player[media-id='5b6z8yvr5c']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/5b6z8yvr5c/swatch');display:block;filter:blur(5px);padding-top:56.25%}
 wistia-player[media-id='il3wz1p5mr']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/il3wz1p5mr/swatch');display:block;filter:blur(5px);padding-top:56.25%}
@@ -368,24 +373,20 @@ body::after{content:"";position:fixed;inset:0;z-index:1;background-image:linear-
 <!-- ══ HOW WE BUILD YOUR AI ══ -->
 <section class="section tint" id="build">
   <div class="wrap">
-    <div class="two-col">
-      <div class="rv">
-        <div class="eyebrow">Built on what actually works</div>
-        <h2>We build your AI on what <em>actually</em> works.</h2>
-        <p class="sub">We've sold our own AI for over a year now, to clients in healthcare, legal, finance, real estate, all over the board. We've watched what makes these products take off, and what makes them quietly flop. We build yours on the winners.</p>
-        <ul class="deliver" style="margin-top:var(--sp-5)">
-          <li><strong>Simple beats stuffed.</strong> The best products do two or three things people can't live without, not thirty they'll never click. A confused mind never buys.</li>
-          <li><strong>A clear path, not just a quick win.</strong> Your AI lays out the exact steps from where your buyer is now to where they want to be, so a big goal finally feels doable.</li>
-          <li><strong>It goes first, it doesn't wait.</strong> Instead of a blank chat box, your AI hands each person a plan, follows up, keeps them on track, and shows their progress over time.</li>
-        </ul>
-        <p style="margin-top:var(--sp-5);font-size:var(--fs-sm)">That's the line between an AI people forget they bought and one they build their business around.</p>
-      </div>
-      <div class="rv">
-        <div class="vid-embed">
-          <wistia-player media-id="1m53imbdkv" aspect="1.7777777777777777"></wistia-player>
-        </div>
-      </div>
+    <div class="section-head rv">
+      <div class="eyebrow">Built on what actually works</div>
+      <h2>We build your AI on what <em>actually</em> works.</h2>
+      <p class="sub">We've sold our own AI for over a year now, to clients in healthcare, legal, finance, real estate, all over the board. We've watched what makes these products take off, and what makes them quietly flop. We build yours on the winners.</p>
     </div>
+    <div class="vid-embed rv">
+      <wistia-player media-id="1m53imbdkv" aspect="1.7777777777777777"></wistia-player>
+    </div>
+    <div class="keys rv">
+      <div class="key"><strong>Simple beats stuffed.</strong><p>The best products do two or three things people can't live without, not thirty they'll never click. A confused mind never buys.</p></div>
+      <div class="key"><strong>A clear path, not just a quick win.</strong><p>Your AI lays out the exact steps from where your buyer is now to where they want to be, so a big goal finally feels doable.</p></div>
+      <div class="key"><strong>It goes first, it doesn't wait.</strong><p>Instead of a blank chat box, your AI hands each person a plan, follows up, keeps them on track, and shows their progress over time.</p></div>
+    </div>
+    <p class="rv" style="text-align:center;max-width:54ch;margin:var(--space-block) auto 0;font-size:var(--fs-lead);color:var(--ink-2);line-height:1.5">That's the line between an AI people forget they bought and one they build their business around.</p>
   </div>
 </section>
 
