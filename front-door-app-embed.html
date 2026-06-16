@@ -54,7 +54,7 @@ body{font-family:var(--fb);background:transparent;color:var(--ink);-webkit-font-
 .s-d{font-size:1.1875rem;color:var(--ink-2);line-height:1.45;margin-top:6px}
 
 /* ───── 1:1 app screen ───── */
-.app{--ctl:70px;--orbcv:calc(var(--ctl)*1.4*3.0);width:390px;height:812px;flex:none;border-radius:48px;border:1px solid var(--a100);background:#fff;overflow:hidden;position:relative;display:flex;flex-direction:column;box-shadow:0 50px 90px -34px rgba(46,38,28,.42);font-weight:500}
+.app{--ctl:70px;--orbcv:calc(var(--ctl)*1.4*3.4);width:390px;height:812px;flex:none;border-radius:48px;border:1px solid var(--a100);background:#fff;overflow:hidden;position:relative;display:flex;flex-direction:column;box-shadow:0 50px 90px -34px rgba(46,38,28,.42);font-weight:500}
 .app-bg{position:absolute;inset:0;z-index:0;pointer-events:none;transition:opacity .6s ease}
 .app-bg.g{background:linear-gradient(180deg,#fff 0%,var(--wash) 63%);opacity:1}
 .app-bg.o{background:linear-gradient(180deg,#fff 0%,#f4e6d3 63%);opacity:0}
@@ -117,7 +117,7 @@ body{font-family:var(--fb);background:transparent;color:var(--ink);-webkit-font-
 .avatar.talking .av-mouth{animation:avtalk .25s ease-in-out infinite alternate}
 @keyframes avtalk{from{height:4px;width:22px}to{height:14px;width:26px}}
 .av-ring{display:none}
-.orb-cv{position:absolute;left:50%;bottom:calc(10px + var(--ctl)*0.7 - var(--orbcv)/2);width:var(--orbcv);height:var(--orbcv);transform:translateX(-50%);z-index:0;pointer-events:none;-webkit-mask-image:radial-gradient(circle at center,#000 46%,transparent 82%);mask-image:radial-gradient(circle at center,#000 46%,transparent 82%)}
+.orb-cv{position:absolute;left:50%;bottom:calc(10px + var(--ctl)*0.7 - var(--orbcv)/2);width:var(--orbcv);height:var(--orbcv);transform:translateX(-50%);z-index:0;pointer-events:none}
 .avatar.talking .av-ring{animation:avring 1.3s ease-out infinite}
 @keyframes avring{0%{opacity:.5;transform:scale(1)}100%{opacity:0;transform:scale(1.2)}}
 /* realistic photo avatar variant */
