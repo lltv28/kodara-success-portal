@@ -574,7 +574,7 @@ start();
 (function(){
   var cv=document.getElementById('orbcv'); if(!cv) return;
   var ctx=cv.getContext('2d'); if(!ctx) return;
-  var av=document.getElementById("avatar"), COUNT=500;
+  var av=document.getElementById("avatar"), appEl=av&&av.closest(".app"), COUNT=500;
   function hexToRgb(hex){var h=(hex||'').replace('#','');if(h.length===3)h=h[0]+h[0]+h[1]+h[1]+h[2]+h[2];var n=parseInt(h,16)||0;return [((n>>16)&255)/255,((n>>8)&255)/255,(n&255)/255];}
   function rgbToHsl(c){var r=c[0],g=c[1],b=c[2],mx=Math.max(r,g,b),mn=Math.min(r,g,b),h=0,s=0,l=(mx+mn)/2;if(mx!==mn){var d=mx-mn;s=l>0.5?d/(2-mx-mn):d/(mx+mn);if(mx===r)h=(g-b)/d+(g<b?6:0);else if(mx===g)h=(b-r)/d+2;else h=(r-g)/d+4;h/=6;}return [h,s,l];}
   function hslToRgb(h,s,l){if(s===0)return [l,l,l];function f(p,q,t){if(t<0)t+=1;if(t>1)t-=1;if(t<1/6)return p+(q-p)*6*t;if(t<1/2)return q;if(t<2/3)return p+(q-p)*(2/3-t)*6;return p;}var q=l<0.5?l*(1+s):l+s-l*s,p=2*l-q;return [f(p,q,h+1/3),f(p,q,h),f(p,q,h-1/3)];}
@@ -590,11 +590,14 @@ start();
     if(cv.width!==dev){cv.width=dev;cv.height=dev;}
     ctx.setTransform(dpr,0,0,dpr,0,0);
     var C=S/2,ORB=S*0.26;
-    var talking=av&&av.classList.contains('talking');
-    var target=talking?Math.max(0,Math.min(1,0.34+0.26*Math.sin(t*8.0)+0.18*Math.sin(t*13.7+1.3))):0;
+    /* state: AI speaking -> pulse, user input -> faster spin, else -> slow spin */
+    var ai=appEl&&appEl.classList.contains('ai-speaking');
+    var usr=appEl&&(appEl.classList.contains('user-speaking')||appEl.classList.contains('listening'));
+    var target=ai?Math.max(0,Math.min(1,0.34+0.26*Math.sin(t*8.0)+0.18*Math.sin(t*13.7+1.3))):0;
     sl+=(target-sl)*(target>sl?0.35:0.1);var lvl=sl;
     lerpRamp(cur,buildRamp(accent()),0.06);
-    ay+=dt*(0.25+lvl*2.6);
+    var spin=usr?1.5:0;
+    ay+=dt*(0.25+lvl*2.6+spin);
     ctx.clearRect(0,0,S,S);
     var ca=Math.cos(ay),sa=Math.sin(ay),amp=1+lvl*0.18,jit=lvl*0.11*ORB,small=1-lvl*0.4,proj=[];
     for(var j=0;j<pts.length;j++){var p=pts[j];var X=p.x*ca-p.z*sa,Z=p.x*sa+p.z*ca,Y=p.y,pe=1+Z*0.35;
