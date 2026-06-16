@@ -1,0 +1,3 @@
+:HL["/kodara-success-portal/demo/_next/static/chunks/0eeuj0ceespoe.css","style"]
+:HL["/kodara-success-portal/demo/_next/static/media/f06bf9da926bae75.p.0pz0x0eczp58u.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"hive","param":null,"prefetchHints":0,"slots":{"children":{"name":"ladder-d4a","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"67aXu06KBwhKoo5Dg5cdN"}
