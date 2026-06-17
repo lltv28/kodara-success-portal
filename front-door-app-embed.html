@@ -96,7 +96,7 @@ body{font-family:var(--fb);background:transparent;color:var(--ink);-webkit-font-
 .vtrans{min-height:44px;display:flex;flex-wrap:wrap;gap:5px 7px;justify-content:center;align-items:center;padding:0 28px;max-width:100%}
 .vtrans .w{opacity:0;transform:translateY(5px);transition:opacity .3s ease,transform .3s ease;font-size:17px;font-weight:500;color:var(--a900);letter-spacing:-.2px}
 .vtrans .w.in{opacity:1;transform:none}
-.orb{position:relative;width:calc(var(--ctl)*1.4);height:calc(var(--ctl)*1.4);border-radius:50%;background:var(--orbImg) center/cover no-repeat;box-shadow:0 18px 40px -12px var(--orbGlow);animation:orbBreathe 4s ease-in-out infinite}
+.orb{display:none;position:relative;width:calc(var(--ctl)*1.4);height:calc(var(--ctl)*1.4);border-radius:50%;background:var(--orbImg) center/cover no-repeat;box-shadow:0 18px 40px -12px var(--orbGlow);animation:orbBreathe 4s ease-in-out infinite}
 .orb::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;box-shadow:0 0 0 0 rgba(201,138,74,0)}
 .orb.listening::after{animation:listenPulse 1.7s ease-out infinite}
 @keyframes listenPulse{0%{box-shadow:0 0 0 0 rgba(201,138,74,.5)}100%{box-shadow:0 0 0 20px rgba(201,138,74,0)}}
