@@ -243,7 +243,7 @@ body{font-family:var(--fb);background:transparent;color:var(--ink);-webkit-font-
           <div class="step" data-step="1"><div class="srail"><span class="snum">1</span><span class="sline"><i></i></span></div><div class="sbody"><div class="s-t">Talks to every lead</div><div class="s-d">Meets each one in a real, consultative conversation.</div></div></div>
           <div class="step" data-step="2"><div class="srail"><span class="snum">2</span><span class="sline"><i></i></span></div><div class="sbody"><div class="s-t">Figures out their problem</div><div class="s-d">Runs the numbers and shows them where they really stand.</div></div></div>
           <div class="step" data-step="3"><div class="srail"><span class="snum">3</span><span class="sline"><i></i></span></div><div class="sbody"><div class="s-t">Sells them a first step</div><div class="s-d">Starts them with a small $10–100 offer — like day one with a client.</div></div></div>
-          <div class="step" data-step="4"><div class="srail"><span class="snum">4</span></div><div class="sbody"><div class="s-t">Ascends them to the right level</div><div class="s-d">After 24–48h of trust, books a high-ticket call or starts the monthly AI.</div></div></div>
+          <div class="step" data-step="4"><div class="srail"><span class="snum">4</span></div><div class="sbody"><div class="s-t">Ascends them to a membership</div><div class="s-d">After a day or two of trust, it sells them a recurring AI membership, hands-off.</div></div></div>
         </div>
       </div>
 
@@ -287,7 +287,7 @@ body{font-family:var(--fb);background:transparent;color:var(--ink);-webkit-font-
           </div>
           <div class="m timediv" data-m="time">2 days later</div>
           <div class="m ai-text" data-m="a6"></div>
-          <div class="m bk" data-m="route"></div>
+          <div class="m ocard" data-m="route"></div>
         </div>
 
         <div class="orbzone"><canvas class="orb-cv" id="orbcv" aria-hidden="true"></canvas><div class="vtrans" id="vtrans"></div><div class="orb"></div><div class="avatar photo" id="avatar" aria-hidden="true"><video class="av-vid" muted autoplay loop playsinline preload="auto" poster="avatar-finance.jpg"><source src="avatar-finance.mp4" type="video/mp4"></video><div class="av-face"><span class="av-brow l"></span><span class="av-brow r"></span><span class="av-eye l"></span><span class="av-eye r"></span><span class="av-mouth"></span></div><div class="av-ring"></div></div></div>
@@ -316,37 +316,42 @@ const INDUSTRIES={
     a3:'I’ve run your numbers. Here’s where your money actually stands:',
     a4:'The problem isn’t your returns. It’s the $4,100 a year you’re quietly leaking in fees.',
     a5:'Here’s where I’d start you — a quick audit that shows the exact funds to move:',
-    a6:'You came back twice and asked how to fix the fees yourself — that’s the sign you’re ready. Let’s talk.',
+    a6:'You’ve come back twice to fix those fees yourself, so you’re clearly ready for more than a one-off. Here’s where I’d take you next:',
     cards:[['Portfolio value','$284,120'],['Idle cash','$61,000'],['Annual fees','$4,100'],['Net return','5.1%']],
-    offer:{title:'Portfolio Leak Audit',price:'$27',cta:'Get the audit',sub:'A 12-minute breakdown of exactly where your money is leaking — and the first move to plug it.',bullets:['The 3 funds quietly bleeding fees','What to move them into instead','Your new projected return']}},
+    offer:{title:'Portfolio Leak Audit',price:'$27',cta:'Get the audit',sub:'A 12-minute breakdown of exactly where your money is leaking — and the first move to plug it.',bullets:['The 3 funds quietly bleeding fees','What to move them into instead','Your new projected return']},
+    mid:{title:'Wealth Copilot',price:'$299/mo',full:'$299.00/mo',cta:'Start membership',sub:'Your AI advisor keeping an eye on your money every day, not once a year.',bullets:['Alerts the moment your fees or allocation drift','A plan that updates as your numbers change','Ask it anything, any time, in your advisor’s voice']}},
   doctor:{label:'Doctor',appTitle:'Your health snapshot',role:'With your doctor',
     a3:'I’ve gone through your intake. Here’s what your numbers say:',
     a4:'The fatigue isn’t random — it tracks straight back to your sleep and low vitamin D.',
     a5:'Here’s where I’d start you — a short reset built around exactly these markers:',
-    a6:'You logged your sleep every night this week — that’s the sign you’re ready to go deeper. Let’s talk.',
+    a6:'You’ve logged your sleep every night this week, so you’re ready to go deeper. Here’s where I’d take you next:',
     cards:[['Resting HR','74 bpm'],['Sleep (avg)','5h 50m'],['Vitamin D','21 ng/mL'],['Energy score','42/100']],
-    offer:{title:'The 7-Day Energy Reset',price:'$29',cta:'Get the reset',sub:'A short protocol targeting the two markers dragging your energy down — sleep and vitamin D.',bullets:['The 3 changes that move your numbers first','A simple sleep + supplement plan','What to retest in 30 days']}},
+    offer:{title:'The 7-Day Energy Reset',price:'$29',cta:'Get the reset',sub:'A short protocol targeting the two markers dragging your energy down — sleep and vitamin D.',bullets:['The 3 changes that move your numbers first','A simple sleep + supplement plan','What to retest in 30 days']},
+    mid:{title:'Health Copilot',price:'$249/mo',full:'$249.00/mo',cta:'Start membership',sub:'A daily health coach trained on your protocols, right in their pocket.',bullets:['Tracks their markers and flags what needs attention','Adjusts the plan as the numbers move','Answers their questions between visits']}},
   mortgage:{label:'Mortgage broker',appTitle:'Your mortgage snapshot',role:'With your broker',
     a3:'I’ve pulled your numbers. Here’s where your mortgage actually stands:',
     a4:'You’re sitting about 0.8% above today’s rates — that’s roughly $310 a month you’re overpaying.',
     a5:'Here’s where I’d start you — a quick refinance check that shows your exact savings:',
-    a6:'You ran the savings twice this week — that’s the sign you’re ready. Let’s talk.',
+    a6:'You’ve run these savings twice this week, so you’re ready for the next step. Here’s what I’d set you up with:',
     cards:[['Current rate','6.9%'],['Balance','$418,000'],['Monthly payment','$2,940'],['Save / mo','~$310']],
-    offer:{title:'The Refinance Rate Check',price:'$27',cta:'Get the check',sub:'A 10-minute breakdown of what you’d save by refinancing — and whether it’s worth doing right now.',bullets:['Your rate vs today’s market','Exact monthly + lifetime savings','Whether the closing costs pencil out']}},
+    offer:{title:'The Refinance Rate Check',price:'$27',cta:'Get the check',sub:'A 10-minute breakdown of what you’d save by refinancing — and whether it’s worth doing right now.',bullets:['Your rate vs today’s market','Exact monthly + lifetime savings','Whether the closing costs pencil out']},
+    mid:{title:'Rate Watch',price:'$199/mo',full:'$199.00/mo',cta:'Start membership',sub:'Your AI broker watching the market so they never miss a better rate.',bullets:['Pings them the moment refinancing makes sense','Runs their savings on demand, any time','Keeps their numbers ready for when they move']}},
   lawyer:{label:'Lawyer',appTitle:'Your estate snapshot',role:'With your attorney',
     a3:'I’ve reviewed what you shared. Here’s where your estate plan actually stands:',
     a4:'The real risk isn’t taxes — it’s the missing power of attorney leaving $340k exposed.',
     a5:'Here’s where I’d start you — a quick review that maps exactly what to fix first:',
-    a6:'You came back to check that exposure twice — that’s the sign you’re ready. Let’s talk.',
+    a6:'You’ve come back to check that exposure twice, so you’re ready to lock this down. Here’s where I’d take you next:',
     cards:[['Will','Outdated · 2016'],['Power of attorney','Missing'],['Assets exposed','$340,000'],['Plan score','38/100']],
-    offer:{title:'The Estate Gap Review',price:'$49',cta:'Get the review',sub:'A clear breakdown of the gaps in your current plan — and the first document to fix.',bullets:['The clauses leaving assets exposed','What to update before anything else','A prioritized fix list']}},
+    offer:{title:'The Estate Gap Review',price:'$49',cta:'Get the review',sub:'A clear breakdown of the gaps in your current plan — and the first document to fix.',bullets:['The clauses leaving assets exposed','What to update before anything else','A prioritized fix list']},
+    mid:{title:'Estate Guard',price:'$399/mo',full:'$399.00/mo',cta:'Start membership',sub:'Their plan, reviewed and kept current as life changes.',bullets:['Flags new gaps before they become problems','Keeps documents and beneficiaries up to date','Answers their questions in your firm’s voice']}},
   consultant:{label:'Business consultant',appTitle:'Your business snapshot',role:'With your consultant',
     a3:'I’ve mapped your numbers. Here’s where your business actually stands:',
     a4:'Growth isn’t the problem — you’re capped because almost everything still runs through you.',
     a5:'Here’s where I’d start you — a quick map of the first system to take off your plate:',
-    a6:'You opened that map three times this week — that’s the sign you’re ready to scale. Let’s talk.',
+    a6:'You’ve opened that map three times this week, so you’re ready to scale. Here’s where I’d take you next:',
     cards:[['Monthly revenue','$82,000'],['Owner hours/wk','61 hrs'],['Profit margin','11%'],['Capacity used','98%']],
-    offer:{title:'The Capacity Map',price:'$49',cta:'Get the map',sub:'A breakdown of where your time leaks — and the first system to delegate this month.',bullets:['The tasks eating your week','The first role to hand off','What to systemize first']}}
+    offer:{title:'The Capacity Map',price:'$49',cta:'Get the map',sub:'A breakdown of where your time leaks — and the first system to delegate this month.',bullets:['The tasks eating your week','The first role to hand off','What to systemize first']},
+    mid:{title:'Scale Copilot',price:'$499/mo',full:'$499.00/mo',cta:'Start membership',sub:'An operating partner that takes work off their plate every week.',bullets:['Maps the next system to delegate each month','Tracks their capacity and owner hours','Coaches their team in your voice']}}
 };
 let activeInd='consultant';
 const THEME={
@@ -359,7 +364,8 @@ const THEME={
 function applyTheme(key){const t=THEME[key]||THEME.finance,r=document.documentElement.style;r.setProperty('--accent',t.accent);r.setProperty('--accent-ink',t.ink);r.setProperty('--accent-soft',t.soft);r.setProperty('--accent-line',t.line);r.setProperty('--wash',t.wash);r.setProperty('--btnA',t.btnA);r.setProperty('--btnB',t.btnB);r.setProperty('--orbGlow',t.orbGlow);r.setProperty('--orbImg',t.orbImg);const ap=document.querySelector('.app');if(ap)ap.classList.toggle('avatar-mode',key==='consultant');}
 function setAppTitle(D){const t=document.getElementById('appTitle');if(t)t.textContent=D.appTitle;}
 function renderCards(D){const wrap=q('[data-m="cards"]');[...wrap.querySelectorAll('.card')].forEach((c,i)=>{const d=D.cards[i];if(!d)return;c.querySelector('.cl').textContent=d[0];c.querySelector('.cv').textContent=d[1];});}
-function renderReco(D){const o=D.offer;q('[data-m="reco"]').innerHTML='<span class="ocard-chip"><span class="dot"></span>Recommended first step</span><div class="ocard-title">'+o.title+'</div><div class="ocard-sub">'+o.sub+'</div><div class="ocard-bullets">'+o.bullets.map(b=>'<div class="ocard-bullet"><span class="bi">'+BULLET_CHK+'</span>'+b+'</div>').join('')+'</div><button class="ocard-cta">'+o.cta+' <span class="px">· '+o.price+'</span> '+RECO_ARROW+'</button>';}
+function offerCardHTML(o,chip){return '<span class="ocard-chip"><span class="dot"></span>'+chip+'</span><div class="ocard-title">'+o.title+'</div><div class="ocard-sub">'+o.sub+'</div><div class="ocard-bullets">'+o.bullets.map(b=>'<div class="ocard-bullet"><span class="bi">'+BULLET_CHK+'</span>'+b+'</div>').join('')+'</div><button class="ocard-cta">'+o.cta+' <span class="px">· '+o.price+'</span> '+RECO_ARROW+'</button>';}
+function renderReco(D){q('[data-m="reco"]').innerHTML=offerCardHTML(D.offer,'Recommended first step');}
 const chat=document.getElementById('chat');
 const app=document.querySelector('.app');
 function turn(who){app.classList.toggle('turn-user',who==='user');}
@@ -479,10 +485,10 @@ async function tapAt(el,W){
   return true;
 }
 async function typeChars(el,text,W){el.textContent='';for(let i=0;i<text.length;i++){el.textContent=text.slice(0,i+1);if(!await W(34))return false;}return true;}
-function buildPayHTML(o){const full=o.price+'.00';return '<div class="pay-backdrop"></div><div class="pay-sheet"><div class="pay-grab"></div><div class="pay-head"><div class="pay-merch">Kodara · secure checkout</div><div class="pay-amt"><span>'+o.title+'</span><b>'+full+'</b></div></div><div class="pay-body"><label>Card information</label><div class="pay-field"><span class="pv blurred" data-cardnum></span><span class="cardbrand" data-brand></span></div><div class="pay-row"><div class="pay-field"><span class="pv blurred" data-exp></span></div><div class="pay-field"><span class="pv blurred" data-cvc></span></div></div><label>Name on card</label><div class="pay-field"><span class="pv blurred" data-name></span></div></div><button class="pay-btn">Pay '+full+'</button><div class="pay-secure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Encrypted &amp; secure</div><div class="pay-success"><div class="pay-success-ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></div><div class="pay-success-t">Payment confirmed</div><div class="pay-success-s">'+full+' · '+o.title+'</div></div></div>';}
+function buildPayHTML(o){const full=o.full||(o.price+'.00');return '<div class="pay-backdrop"></div><div class="pay-sheet"><div class="pay-grab"></div><div class="pay-head"><div class="pay-merch">Kodara · secure checkout</div><div class="pay-amt"><span>'+o.title+'</span><b>'+full+'</b></div></div><div class="pay-body"><label>Card information</label><div class="pay-field"><span class="pv blurred" data-cardnum></span><span class="cardbrand" data-brand></span></div><div class="pay-row"><div class="pay-field"><span class="pv blurred" data-exp></span></div><div class="pay-field"><span class="pv blurred" data-cvc></span></div></div><label>Name on card</label><div class="pay-field"><span class="pv blurred" data-name></span></div></div><button class="pay-btn">Pay '+full+'</button><div class="pay-secure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Encrypted &amp; secure</div><div class="pay-success"><div class="pay-success-ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></div><div class="pay-success-t">Payment confirmed</div><div class="pay-success-s">'+full+' · '+o.title+'</div></div></div>';}
 /* blurred checkout sheet: slides up, auto-fills card details, pays, confirms */
-async function payFlow(app,W){
-  const ov=document.createElement('div');ov.className='pay-overlay';ov.innerHTML=buildPayHTML(INDUSTRIES[activeInd].offer);app.appendChild(ov);
+async function payFlow(app,W,offer){
+  const ov=document.createElement('div');ov.className='pay-overlay';ov.innerHTML=buildPayHTML(offer||INDUSTRIES[activeInd].offer);app.appendChild(ov);
   const die=()=>{ov.remove();return false;};
   void ov.offsetWidth;ov.classList.add('in');
   const cur0=document.getElementById('tapcursor');if(cur0)cur0.classList.remove('show');
@@ -506,9 +512,9 @@ async function payFlow(app,W){
   ov.remove();return true;
 }
 /* tap-to-buy: tap the offer, run the blurred checkout, then flip the button to Purchased */
-async function tapBuy(btn,W){
+async function tapBuy(btn,W,offer){
   if(!await tapAt(btn,W))return false;
-  if(!await payFlow(btn.closest('.app'),W))return false;
+  if(!await payFlow(btn.closest('.app'),W,offer))return false;
   btn.classList.add('sold');btn.innerHTML=CHK_W+' Purchased';
   const cur=document.getElementById('tapcursor');if(cur)cur.classList.remove('show');
   if(!await W(420))return false;
@@ -554,13 +560,14 @@ async function play(){
   show('[data-m="a6"]');await stream(q('[data-m="a6"]'),D.a6,55,alive);if(!alive())return;if(!await W(1400))return;
   steps[3].classList.add('done');
   const routeEl=q('[data-m="route"]');
-  await new Promise(res=>{
-    routeEl.classList.remove('pending');
-    buildBooking(routeEl,alive,res);
-    void routeEl.offsetWidth;routeEl.classList.add('in');lastEl=routeEl;lastPin=true;focusFade();anchorTop(routeEl);
-  });
+  routeEl.classList.remove('pending');
+  routeEl.innerHTML=offerCardHTML(D.mid,'Your AI membership');
+  void routeEl.offsetWidth;routeEl.classList.add('in');lastEl=routeEl;lastPin=true;focusFade();anchorTop(routeEl);
+  const midBtn=routeEl.querySelector('.ocard-cta');
+  if(!await W(2400))return;
+  if(midBtn&&!await tapBuy(midBtn,W,D.mid))return;
   if(!alive())return;
-  await W(3200);
+  await W(3000);
 }
 async function loop(){const g=gen;do{await play();if(g!==gen)return;await sleep(900);}while(g===gen);}
 function start(){gen++;loop();}
