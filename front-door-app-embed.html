@@ -233,7 +233,7 @@ body{font-family:var(--fb);background:transparent;color:var(--ink);-webkit-font-
   <div class="below">
     <h2 class="below-h">Watch it turn a stranger into a sale.</h2>
     <p class="below-sub">When a new lead shows up, your AI does what you’d do on a first call. It asks the right questions, works out what they need, and points them to the next step. On its own, for hundreds at once.</p>
-    <div class="industry"><span class="ik">Try it for your world:</span><div class="industry-row"><button class="pill active" data-ind="finance" aria-pressed="true">Financial advisor</button><button class="pill" data-ind="doctor" aria-pressed="false">Doctor</button><button class="pill" data-ind="mortgage" aria-pressed="false">Mortgage broker</button><button class="pill" data-ind="lawyer" aria-pressed="false">Lawyer</button><button class="pill" data-ind="consultant" aria-pressed="false">Business consultant</button></div></div>
+    <div class="industry"><span class="ik">Try it for your world:</span><div class="industry-row"><button class="pill active" data-ind="consultant" aria-pressed="true">Business consultant</button><button class="pill" data-ind="finance" aria-pressed="false">Financial advisor</button><button class="pill" data-ind="doctor" aria-pressed="false">Doctor</button><button class="pill" data-ind="mortgage" aria-pressed="false">Mortgage broker</button><button class="pill" data-ind="lawyer" aria-pressed="false">Lawyer</button></div></div>
   </div>
 
   <div class="demo-card">
@@ -348,7 +348,7 @@ const INDUSTRIES={
     cards:[['Monthly revenue','$82,000'],['Owner hours/wk','61 hrs'],['Profit margin','11%'],['Capacity used','98%']],
     offer:{title:'The Capacity Map',price:'$49',cta:'Get the map',sub:'A breakdown of where your time leaks — and the first system to delegate this month.',bullets:['The tasks eating your week','The first role to hand off','What to systemize first']}}
 };
-let activeInd='finance';
+let activeInd='consultant';
 const THEME={
   finance:{accent:'#16A46C',ink:'#0F7A4F',soft:'rgba(22,164,108,.10)',line:'rgba(22,164,108,.24)',wash:'#e6edea',btnA:'#1faf78',btnB:'#0f8052',orbGlow:'rgba(16,80,50,.42)',orbImg:'url("app-orb.png")'},
   doctor:{accent:'#0EA5A4',ink:'#0A6E6D',soft:'rgba(14,165,164,.10)',line:'rgba(14,165,164,.24)',wash:'#e2edee',btnA:'#15b1b0',btnB:'#0a7b7a',orbGlow:'rgba(10,92,90,.42)',orbImg:'url("app-orb-doctor.png")'},
@@ -356,7 +356,7 @@ const THEME={
   lawyer:{accent:'#4E5AC8',ink:'#343FA0',soft:'rgba(78,90,200,.10)',line:'rgba(78,90,200,.24)',wash:'#e8e9f4',btnA:'#5c68d2',btnB:'#38439e',orbGlow:'rgba(42,50,120,.42)',orbImg:'url("app-orb-lawyer.png")'},
   consultant:{accent:'#C0853C',ink:'#8A5E27',soft:'rgba(192,133,60,.12)',line:'rgba(192,133,60,.26)',wash:'#f1e9db',btnA:'#cc9148',btnB:'#94642c',orbGlow:'rgba(120,80,30,.42)',orbImg:'url("app-orb-consultant.png")'}
 };
-function applyTheme(key){const t=THEME[key]||THEME.finance,r=document.documentElement.style;r.setProperty('--accent',t.accent);r.setProperty('--accent-ink',t.ink);r.setProperty('--accent-soft',t.soft);r.setProperty('--accent-line',t.line);r.setProperty('--wash',t.wash);r.setProperty('--btnA',t.btnA);r.setProperty('--btnB',t.btnB);r.setProperty('--orbGlow',t.orbGlow);r.setProperty('--orbImg',t.orbImg);const ap=document.querySelector('.app');if(ap)ap.classList.add('avatar-mode');}
+function applyTheme(key){const t=THEME[key]||THEME.finance,r=document.documentElement.style;r.setProperty('--accent',t.accent);r.setProperty('--accent-ink',t.ink);r.setProperty('--accent-soft',t.soft);r.setProperty('--accent-line',t.line);r.setProperty('--wash',t.wash);r.setProperty('--btnA',t.btnA);r.setProperty('--btnB',t.btnB);r.setProperty('--orbGlow',t.orbGlow);r.setProperty('--orbImg',t.orbImg);const ap=document.querySelector('.app');if(ap)ap.classList.toggle('avatar-mode',key==='consultant');}
 function setAppTitle(D){const t=document.getElementById('appTitle');if(t)t.textContent=D.appTitle;}
 function renderCards(D){const wrap=q('[data-m="cards"]');[...wrap.querySelectorAll('.card')].forEach((c,i)=>{const d=D.cards[i];if(!d)return;c.querySelector('.cl').textContent=d[0];c.querySelector('.cv').textContent=d[1];});}
 function renderReco(D){const o=D.offer;q('[data-m="reco"]').innerHTML='<span class="ocard-chip"><span class="dot"></span>Recommended first step</span><div class="ocard-title">'+o.title+'</div><div class="ocard-sub">'+o.sub+'</div><div class="ocard-bullets">'+o.bullets.map(b=>'<div class="ocard-bullet"><span class="bi">'+BULLET_CHK+'</span>'+b+'</div>').join('')+'</div><button class="ocard-cta">'+o.cta+' <span class="px">· '+o.price+'</span> '+RECO_ARROW+'</button>';}
